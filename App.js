@@ -111,32 +111,44 @@ export default function App() {
       <View>
         <View style={styles.inColl}>
           <View style={styles.inLine}>
-            <Ionicons name="male-female-sharp" size={24} color="black" />
-            <Text>Choose your gender</Text>
+            <Ionicons name="male-female-sharp" size={24} color="#fff" />
+            <Text style={{ color: '#fff', fontSize: 18 }}>
+              Choose your gender
+            </Text>
           </View>
           <View style={styles.inLine}>
             <TouchableOpacity
               onPress={() => {
-                setFcolor('#00000000')
-                setMcolor('#e88')
+                setFcolor('#8779de')
+                setMcolor('#fff')
                 setGender('male')
               }}
             >
-              <View style={[styles.gView, { backgroundColor: mcolor }]}>
-                <FontAwesome5 name="male" size={24} color="black" />
-                <Text>Male</Text>
+              <View
+                style={[
+                  styles.gView,
+                  { borderColor: mcolor, borderRadius: 10 },
+                ]}
+              >
+                <FontAwesome5 name="male" size={24} color="#fff" />
+                <Text style={{ color: '#fff', fontSize: 16 }}>Male</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                setFcolor('#e88')
-                setMcolor('#00000000')
+                setFcolor('#fff')
+                setMcolor('#8779de')
                 setGender('female')
               }}
             >
-              <View style={[styles.gView, { backgroundColor: fcolor }]}>
-                <FontAwesome5 name="female" size={24} color="black" />
-                <Text>Female</Text>
+              <View
+                style={[
+                  styles.gView,
+                  { borderColor: fcolor, borderRadius: 10 },
+                ]}
+              >
+                <FontAwesome5 name="female" size={24} color="#fff" />
+                <Text style={{ color: '#fff', fontSize: 16 }}>Female</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -147,9 +159,12 @@ export default function App() {
             <MaterialCommunityIcons
               name="human-male-height-variant"
               size={24}
-              color="black"
+              color="#fff"
             />
-            <Text> Enter your height</Text>
+            <Text style={{ color: '#fff', fontSize: 18 }}>
+              {' '}
+              Enter your height
+            </Text>
           </View>
           <TextInput
             autoCompleteType="off"
@@ -164,8 +179,8 @@ export default function App() {
 
         <View style={styles.inColl}>
           <View style={styles.inLine}>
-            <FontAwesome5 name="magic" size={24} color="black" />
-            <Text> Enter your age</Text>
+            <FontAwesome5 name="magic" size={24} color="#fff" />
+            <Text style={{ color: '#fff', fontSize: 18 }}> Enter your age</Text>
           </View>
           <TextInput
             autoCompleteType="off"
@@ -180,8 +195,11 @@ export default function App() {
 
         <View style={styles.inColl}>
           <View style={styles.inLine}>
-            <FontAwesome5 name="weight" size={24} color="black" />
-            <Text> Enter your weight</Text>
+            <FontAwesome5 name="weight" size={24} color="#fff" />
+            <Text style={{ color: '#fff', fontSize: 18 }}>
+              {' '}
+              Enter your weight
+            </Text>
           </View>
           <TextInput
             autoCompleteType="off"
@@ -196,8 +214,11 @@ export default function App() {
 
         <View style={styles.inColl}>
           <View style={styles.inLine}>
-            <MaterialIcons name="sports-handball" size={24} color="black" />
-            <Text> Choose your activity</Text>
+            <MaterialIcons name="sports-handball" size={24} color="#fff" />
+            <Text style={{ color: '#fff', fontSize: 18 }}>
+              {' '}
+              Choose your activity
+            </Text>
           </View>
 
           <View style={styles.inLine}>
@@ -206,11 +227,16 @@ export default function App() {
                 setS1color('#00000000')
                 setS2color('#00000000')
                 setS3color('#00000000')
-                setS0color('#e88')
+                setS0color('#fff')
                 setActivity(0)
               }}
             >
-              <View style={[styles.sView, { backgroundColor: s0color }]}>
+              <View
+                style={[
+                  styles.sView,
+                  { borderColor: s0color, borderRadius: 10 },
+                ]}
+              >
                 <Text style={styles.big}>0</Text>
                 <Text style={styles.smal}>times a week</Text>
               </View>
@@ -221,11 +247,16 @@ export default function App() {
                 setS0color('#00000000')
                 setS2color('#00000000')
                 setS3color('#00000000')
-                setS1color('#e88')
+                setS1color('#fff')
                 setActivity(1)
               }}
             >
-              <View style={[styles.sView, { backgroundColor: s1color }]}>
+              <View
+                style={[
+                  styles.sView,
+                  { borderColor: s1color, borderRadius: 10 },
+                ]}
+              >
                 <Text style={styles.big}>1-2</Text>
                 <Text style={styles.smal}>times a week</Text>
               </View>
@@ -236,11 +267,16 @@ export default function App() {
                 setS1color('#00000000')
                 setS0color('#00000000')
                 setS3color('#00000000')
-                setS2color('#e88')
+                setS2color('#fff')
                 setActivity(2)
               }}
             >
-              <View style={[styles.sView, { backgroundColor: s2color }]}>
+              <View
+                style={[
+                  styles.sView,
+                  { borderColor: s2color, borderRadius: 10 },
+                ]}
+              >
                 <Text style={styles.big}>3-5</Text>
                 <Text style={styles.smal}>times a week</Text>
               </View>
@@ -251,11 +287,16 @@ export default function App() {
                 setS1color('#00000000')
                 setS2color('#00000000')
                 setS0color('#00000000')
-                setS3color('#e88')
+                setS3color('#fff')
                 setActivity(3)
               }}
             >
-              <View style={[styles.sView, { backgroundColor: s3color }]}>
+              <View
+                style={[
+                  styles.sView,
+                  { borderColor: s3color, borderRadius: 10 },
+                ]}
+              >
                 <Text style={styles.big}>6-7</Text>
                 <Text style={styles.smal}>times a week</Text>
               </View>
@@ -265,8 +306,8 @@ export default function App() {
       </View>
       <TouchableOpacity onPress={() => func()}>
         <View style={styles.button}>
-          <MaterialCommunityIcons name="food-apple" size={24} color="black" />
-          <Text>Calculate</Text>
+          <MaterialCommunityIcons name="food-apple" size={24} color="#fff" />
+          <Text style={{ color: '#fff', fontSize: 18 }}>Calculate</Text>
         </View>
       </TouchableOpacity>
       <View style={styles.inColl}>
@@ -279,7 +320,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f88',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -289,15 +330,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   inColl: {
-    width: width * 0.95,
+    width: width * 0.96,
     paddingTop: 10,
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#b88',
-    borderStyle: 'dashed',
+    borderColor: '#8779de',
+    backgroundColor: '#8779de',
+    //borderStyle: 'dashed',
     margin: 5,
   },
   gView: {
@@ -306,40 +348,47 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
     margin: 10,
+    borderWidth: 3,
   },
   input: {
     alignSelf: 'center',
-    borderColor: '#b88',
+    borderColor: '#8779de',
     borderBottomWidth: 1,
     borderStyle: 'solid',
     padding: 1,
     margin: 5,
     textAlign: 'center',
     fontSize: 20,
+    color: '#fff',
   },
   sView: {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 5,
-    margin: 2,
+    marginVertical: 2,
     borderRadius: 10,
+    borderWidth: 3,
   },
   big: {
     fontSize: 30,
+    color: '#fff',
   },
   smal: {
     fontSize: 13,
-    color: '#444',
+    color: '#fff',
   },
   out: {
     fontSize: 24,
+    alignSelf: 'center',
+    paddingBottom: 10,
+    color: '#fff',
   },
   button: {
-    width: width * 0.95,
-    padding: 5,
+    width: width * 0.96,
+    padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#8888',
+    backgroundColor: '#5D49A2',
     borderRadius: 10,
     flexDirection: 'row',
   },
